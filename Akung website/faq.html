@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Page</title>
+    <style>
+        body {
+            font-family: 'Creepster', cursive; /* Changed font to a scary font */
+            margin: 0;
+            padding: 20px;
+            background-image: url('last.jpg'); 
+            background-size: cover;
+            background-position: center;
+            color: #ff3300; /* Changed text color to a blood-red */
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.7); 
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); 
+        }
+        h1 {
+            text-align: center;
+            color: #ff3300; /* Changed h1 color to match text color */
+            margin-bottom: 20px;
+        }
+        p {
+            color: #cccccc; 
+            line-height: 1.6;
+        }
+        .faq-section {
+            margin-top: 30px;
+        }
+        .question {
+            font-weight: bold;
+            color: #ff3300; /* Changed question text color to match h1 */
+            cursor: pointer;
+            transition: color 0.3s; 
+        }
+        .question:hover {
+            color: #ffcc00; /* Changed hover color to a bright yellow */
+        }
+        .answer {
+            margin-left: 20px;
+            color: #ffcc00; /* Changed answer text color to a bright yellow */
+            display: none;
+            transition: display 0.5s ease-in-out; 
+        }
+        .answer.show {
+            display: block; 
+        }
+        .back-home-container {
+            text-align: center;
+        }
+        .back-home {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #333333;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .back-home:hover {
+            background-color: #555555;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Got Questions? Find Answers Here!</h1>
+        <p>Delve into the depths of your inquiries below to unearth unsettling truths.</p>
+
+        <div class="faq-section">
+            <div class="question" onclick="toggleAnswer(this)">What payment methods do you accept?</div>
+            <div class="answer">We accept various forms of tribute, including credit/debit cards, PayPal, Gcash, and bank transfers. Choose your method wisely, for once you commit, there's no escaping the consequences...</div>
+        </div>
+
+        <div class="faq-section">
+            <div class="question" onclick="toggleAnswer(this)">How can I track my order?</div>
+            <div class="answer">Once your package is dispatched, you'll receive a tracking number via email. But beware, the shadows that lurk within the tracking system may reveal more than you dare to comprehend...</div>
+        </div>
+
+        <div class="faq-section">
+            <div class="question" onclick="toggleAnswer(this)">Do you offer refunds?</div>
+            <div class="answer">Indeed, we permit the return of select items within a designated period. However, delving into the murky waters of refunds may unleash forces beyond your control...</div>
+        </div>
+
+        <div class="faq-section">
+            <div class="question" onclick="toggleAnswer(this)">Can I change or cancel my order?</div>
+            <div class="answer">While alterations are feasible in the early stages, once the wheels of fate are set in motion, reversing course becomes perilous. Should you dare to tamper with your order, tread cautiously, for the consequences may be dire...</div>
+        </div>
+
+        <div class="faq-section">
+            <div class="question" onclick="toggleAnswer(this)">How can I contact customer support?</div>
+            <div class="answer">For guidance in navigating the treacherous waters of our services, contact our support team via email, phone, or live chat. But beware, the guidance you seek may lead you down a path from which there is no return...</div>
+        </div>
+    </div>
+
+    <div class="back-home-container">
+        <a href="index.html" class="back-home">Return to the Abyss</a>
+    </div>
+
+    <script>
+        function toggleAnswer(question) {
+            var answer = question.nextElementSibling;
+            var allAnswers = document.querySelectorAll('.answer');
+            allAnswers.forEach(function(item) {
+                if (item !== answer) {
+                    item.classList.remove('show');
+                }
+            });
+            answer.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
+<audio autoplay loop>
+    <source src="Sound Effects_ Eerie Ghost Voice.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>

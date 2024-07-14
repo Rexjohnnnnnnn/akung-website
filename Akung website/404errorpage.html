@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Error Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vampiro+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('awh.jpg'); /* Add a terrifying background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: 'Vampiro One', cursive; /* Eerie font */
+            color: #ff6666;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .container {
+            position: relative;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            color: #ff6666; /* Adjust text color for better visibility */
+        }
+
+        h1 {
+            font-size: 6rem;
+            margin-bottom: 2rem;
+            animation: fadeIn 3s ease-in-out infinite alternate;
+        }
+
+        p {
+            font-size: 2rem;
+            line-height: 1.6;
+            margin-bottom: 4rem;
+            animation: fadeIn 3s ease-in-out infinite alternate;
+            animation-delay: 1s;
+        }
+
+        .back-to-home {
+            position: relative;
+            z-index: 1; /* Ensure the back-to-home button appears above other elements */
+        }
+
+        .back-to-home a {
+            color: #ff6666;
+            text-decoration: none;
+            border: 2px solid #ff6666;
+            padding: 20px 40px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            animation: fadeIn 3s ease-in-out infinite alternate;
+            animation-delay: 2s;
+            font-size: 1.5rem;
+        }
+
+        .back-to-home a:hover {
+            background-color: #ff6666;
+            color: #000;
+        }
+
+        .blood-drip {
+            position: absolute;
+            width: 2px;
+            height: 100vh;
+            background: linear-gradient(to bottom, transparent 90%, #ff6666 90%);
+            animation: bloodDrip 10s linear infinite;
+            z-index: 0;
+        }
+
+        @keyframes bloodDrip {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+
+        .shadow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+            z-index: 0;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-10px); }
+            100% { opacity: 1; transform: translateY(10px); }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 4rem;
+            }
+            p {
+                font-size: 1.5rem;
+            }
+            .back-to-home a {
+                padding: 15px 30px;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 3rem;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+            .back-to-home a {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="container">
+        <h1>404 - Page Not Found</h1>
+        <p id="scary-text">Abandon all hope, ye who enter here...</p>
+        <!-- Back to Home Button -->
+        <div class="back-to-home">
+            <a href="index.html" class="home-button">Return to the Abyss</a>
+        </div>
+    </div>
+    <!-- Blood Drip -->
+    <div class="blood-drip"></div>
+    <!-- Shadow Overlay -->
+    <div class="shadow"></div>
+
+    <!-- Add an eerie audio track -->
+    <audio autoplay loop>
+        <source src="odyo.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Particles.js Script -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 200,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ff6666"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 10,
+                        "size_min": 0.1,
+                       
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ff6666",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+
+        // Jump scare effect
+        setTimeout(function() {
+            document.getElementById('scary-text').innerText = 'wakay uyab!'; // Customize the jump scare text
+        }, 3000); // Change the delay (in milliseconds) as needed
+    </script>
+</body>
+</html>

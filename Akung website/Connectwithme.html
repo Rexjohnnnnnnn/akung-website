@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect with Me</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Creepster', cursive;
+            color: #8B0000; /* Dark red text color */
+            min-height: 100vh; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+            background-image: url('hala.jpg'); /* Your existing background image */
+            background-size: cover; /* Adjust background size to cover the entire body */
+            background-position: center top; /* Position the background slightly down from the top */
+            position: relative; /* Relative positioning for blood effect */
+        }
+        
+        header {
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: #8B0000; /* Dark red color */
+            font-size: 48px; /* Larger font size for emphasis */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for a spooky effect */
+            margin-bottom: 20px; /* Increased margin for separation */
+        }
+        
+        main {
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Dark shadow */
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        main:hover {
+            transform: translateY(-5px);
+        }
+        
+        .social-media {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        
+        .social-media li {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-media li:hover {
+            transform: scale(1.2);
+        }
+
+        .social-media a {
+            color: #8B0000; /* Dark red color */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-media a:hover {
+            color: #B22222; /* Lighter dark red color */
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #8B0000; /* Dark red border */
+            box-shadow: 0 8px 16px rgba(139, 0, 0, 0.5); /* Dark red shadow */
+            transition: transform 0.3s ease;
+        }
+
+        .profile-picture:hover {
+            transform: scale(1.1);
+        }
+        
+        .home-button {
+            background-color: #8B0000; /* Dark red background */
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .home-button:hover {
+            background-color: #B22222; /* Lighter dark red background */
+        }
+        
+        /* Blood drop effect */
+        .blood {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: #B22222; /* Dark red color */
+            border-radius: 50%;
+            animation: blood-drop 2s linear infinite alternate; /* Blood drop animation */
+            pointer-events: none;
+            z-index: -1; /* Behind all other content */
+        }
+
+        /* Blood drop animation keyframes */
+        @keyframes blood-drop {
+            0% {
+                transform: translateY(-50px) scale(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(500px) scale(1);
+                opacity: 0;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Blood drop effect -->
+    <div class="blood"></div> 
+    <header>
+        <h1>Connect with the Dark Side</h1>
+    </header>
+    <main>
+        <img src="pisbokk.jpg" alt="Your Image" class="profile-picture"> <!-- Your existing profile picture -->
+        <p>Unleash your fears and connect with the darkness through the following portals:</p>
+        <ul class="social-media">
+            <li><a href="mailto:rex.derayal@jmc.edu.ph"><i class="far fa-envelope"></i></a></li>
+            <li><a href="tel:+639454485595"><i class="fas fa-phone"></i></a></li>
+            <li>
+                <a href="https://www.instagram.com/rexjohn.szn/"><i class="fab fa-instagram"></i></a>
+            </li>
+
+            <a href="https://www.facebook.com/rexjohn.derayal.71"><i class="fab fa-facebook"></i></a>
+        </li>
+    </ul>
+</main>
+
+<a href="index.html" class="home-button">Return to the Abyss</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+</html>
+<audio autoplay loop>
+    <source src="Mommy (Ringtone) Scary.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>

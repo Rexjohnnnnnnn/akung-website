@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+
+    body {
+        font-family: 'Creepster', cursive;
+        margin: 0;
+        padding: 0;
+        background-image: url('hudlok.jpeg'); /* Changed background image */
+        background-size: cover;
+        background-position: center;
+        color: #8b0000; /* Changed text color to deep red */
+    }
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+    }
+    .profile-img {
+        border-radius: 50%;
+        width: 200px; 
+        height: 200px; 
+        object-fit: cover; 
+        margin-bottom: 20px;
+    }
+    .social-links a {
+        margin: 0 10px;
+        color: #333;
+        text-decoration: none;
+    }
+    .social-links a:hover {
+        color: #007bff;
+    }
+
+    h1 {
+        font-family: 'Nosifer', cursive;
+        color: #ff0000; /* Red color */
+        text-shadow: 2px 2px 8px #000000;
+    }
+
+    p {
+        font-family: 'Nosifer', cursive;
+        color: #ff0000; /* Red color */
+        text-shadow: 2px 2px 8px #000000;
+    }
+
+    .dropdown_menu {
+        transform-style: preserve-3d;
+        transition: transform 0.5s ease;
+        transform: perspective(1000px) rotateY(-90deg);
+        backface-visibility: hidden;
+    }
+
+    .dropdown_menu.open {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+
+    .toggle_btn {
+        transition: transform 0.5s ease;
+    }
+
+    .toggle_btn.open {
+        transform: rotate(180deg);
+    }
+
+    .navbar li a,
+    .navbar .action_btn,
+    .dropdown_menu .links a {
+        color: #8b0000; /* Deep red color */
+    }
+
+    .navbar li a:hover,
+    .navbar .action_btn:hover,
+    .dropdown_menu .links a:hover {
+        color: #ff0000; /* Bright red color on hover */
+    }
+  </style>
+  <title>Responsive Navbar</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <li><a href="Connectwithme.html">Connect with me</a></li>
+            <ul class="links">
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="404errorpage.html">404 Error Page</a></li>
+            </ul>
+            <a href="#" class="action_btn">Get Started</a>
+            <div class="toggle_btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown_menu">
+            <ul class="links" style="max-height: 200px; overflow-y: auto;">
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="404errorpage.html">404 Error Page</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section id="hero">
+            <img src="rixjan.jpg" alt="Profile Picture" class="profile-img">
+            <h1>Rexjohn Derayal</h1>
+            <p>I am a first year BSIT student, 21 years old.</p>
+        </section>
+    </main>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const dropDownMenu = document.querySelector('.dropdown_menu');
+    
+        toggleBtn.onclick = function() {
+            dropDownMenu.classList.toggle('open');
+            toggleBtn.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
+<audio autoplay loop>
+    <source src="ILI ILI TULOG ANAY (Sleep for a while, little one).mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>

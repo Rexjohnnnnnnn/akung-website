@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Page</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            color: #ff6666;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow-x: hidden;
+            perspective: 1000px;
+            background-image: url('x.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: relative;
+            z-index: 1;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            width: 250px;
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            transform-origin: center;
+            border: 2px solid transparent;
+            transition: border-color 0.5s ease;
+        }
+
+        .service:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+            border-color: #ff6666;
+        }
+
+        .service-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
+        h2, p {
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            color: #ff6666;
+            transition: transform 0.5s ease;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            transition: transform 0.5s ease;
+        }
+
+        .back-home {
+            text-decoration: none;
+            color: #ff6666;
+            background-color: #1a1a1a;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.5s, transform 0.5s, box-shadow 0.5s;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            margin-top: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .back-home:before,
+        .back-home:after {
+            content: '';
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            transform: skewX(-45deg) translateX(-100%);
+            transition: transform 0.5s;
+        }
+
+        .back-home:after {
+            background: rgba(0, 0, 0, 0.1);
+            transform: skewX(45deg) translateX(-100%);
+        }
+
+        .back-home:hover:before,
+        .back-home:hover:after {
+            transform: skewX(-45deg) translateX(100%);
+        }
+
+        .back-home:hover {
+            background-color: #333;
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Sinister Services Page!</h1>
+        <p>Discover the terrifying offerings we have:</p>
+    </div>
+    <div class="service-container">
+        <div class="service" onclick="toggleService(this)">
+            <div class="service-content">
+                <h2>Dark Arts Academy: Embrace the Shadows</h2>
+                <p>Enter the Dark Arts Academy, where the line between magic and malevolence blurs. Explore forbidden spells, summon demonic forces, and delve into the abyss of black magic. Beware, for once you enter, there is no turning back.</p>
+            </div>
+        </div>
+
+        <div class="service" onclick="toggleService(this)">
+            <div class="service-content">
+                <h2>Haunted Code Crypt: Unravel the Curse</h2>
+                <p>Step into the Haunted Code Crypt, where lines of code whisper chilling secrets and every keystroke awakens ancient curses. Explore the depths of the digital underworld, where bugs become beasts and algorithms wield dark powers.</p>
+            </div>
+        </div>
+
+        <div class="service" onclick="toggleService(this)">
+            <div class="service-content">
+                <h2>Love Language Assurance</h2>
+                <p>Can give you all the 5 love language without asking, ug kaya ka hatagan ug assurance nga gusto nimo tapos kaya ka iupdate anytime.</p>
+            </div>
+        </div>
+        
+        <div class="service" onclick="toggleService(this)">
+            <div class="service-content">
+                <h2>I offer also free lambing</h2>
+                <p>But sorry to you guys akung lambing kay para lang kay crush :P</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <a href="index.html" class="back-home">Return to the Abyss</a>
+    </div>
+
+    <script>
+        function toggleService(element) {
+            element.classList.toggle("flipped");
+        }
+    </script>
+</body>
+</html>
+<audio autoplay loop>
+    <source src="Creepy Little Girl Singing 'Lalala' - Scary Horror Voice (HD) (FREE).mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
